@@ -8,6 +8,7 @@ module.exports = {
     ],
   ],
   plugins: [
+    '@vue/babel-plugin-jsx',
     // 不污染全局，在运行时加载
     [
       "@babel/plugin-transform-runtime",
