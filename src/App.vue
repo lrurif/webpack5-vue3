@@ -8,7 +8,7 @@
 <template>
   <div>
     {{a}}hhahahhaassffaaaas
-    <button @click="add">点击</button>
+    <el-button @click="add">点我修改</el-button>
     <router-link to="/about">关于</router-link>
     <router-link to="/my">我的</router-link>
     <router-view></router-view>

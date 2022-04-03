@@ -2,6 +2,7 @@ const { merge } = require("webpack-merge");
 const base = require("./webpack.common");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 /**
  * 打包时间插件和MiniCssExtractPlugin有冲突，之后解决
  */
@@ -28,7 +29,7 @@ module.exports = merge(base, {
     },
   },
   plugins: [
-    
+    new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin({
       filename: "css/[name].[hash].css",
       chunkFilename: "css/[name].[hash].css",

@@ -28,10 +28,7 @@ module.exports = {
         test: /\.js(x)?$/,
         use: [
           {
-            loader: "babel-loader",
-            options: {
-              cacheDirectory: true,
-            },
+            loader: "babel-loader?cacheDirectory=true",
           },
         ],
         exclude: [/node_modules/],
@@ -53,7 +50,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".vue", ".jsx", ".json"],
+    extensions: [".js", ".vue", ".json"],
     alias: {
       "@": resolve("../src"),
     },
